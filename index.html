@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarina Karipova</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/smooth-scroll.css">
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+    <link rel="stylesheet" href="css/premium-animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-heart">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="preloaderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff1493;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ff69b4;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffb6d9;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M100,170 C100,170 30,120 30,80 C30,55 45,40 65,40 C80,40 90,50 100,65 C110,50 120,40 135,40 C155,40 170,55 170,80 C170,120 100,170 100,170 Z" 
+                          fill="url(#preloaderGradient)"/>
+                </svg>
+            </div>
+            <h1 class="preloader-title">С новым годом!</h1>
+            <p class="preloader-subtitle">♥</p>
+            <button id="startBtn" class="start-button">
+                <span>Начать</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content (скрыт изначально) -->
+    <div id="mainContent" class="main-content" style="display: none;">
+        <!-- Canvas для particles -->
+        <canvas id="particles"></canvas>
+
+        <!-- Hero Section (100vh) -->
+        <section class="hero">
+            <div class="heart-container">
+                <svg class="heart" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff1493;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ff69b4;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffb6d9;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M100,170 C100,170 30,120 30,80 C30,55 45,40 65,40 C80,40 90,50 100,65 C110,50 120,40 135,40 C155,40 170,55 170,80 C170,120 100,170 100,170 Z" 
+                          fill="url(#heartGradient)" 
+                          filter="url(#glow)"
+                          class="heart-path"/>
+                </svg>
+            </div>
+
+            <div class="dates-card">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="date-label">Важные даты</div>
+                    <div class="date-value" id="currentDate">26 июля 2008</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (100vh) -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <h2 class="gallery-title">Галлерея</h2>
+                <div class="gallery-wrapper">
+                    <div class="gallery-grid" id="galleryGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section (100vh) -->
+        <section class="video-section">
+            <div class="video-container">
+                <h2 class="video-title">Видео</h2>
+                <div class="video-wrapper">
+                    <div class="video-grid" id="videoGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Message Section (100vh) -->
+        <section class="final-section">
+            <div class="final-container">
+                <div class="message-card">
+                    <div class="message-decoration"></div>
+                    <h2 class="message-title">Письмо</h2>
+                    <div class="message-text">
+                        <p>Ты искренняя, добрая и очень хорошо относишься к важным тебе людям.</p>
+                        <p>Хоть ты и постоянно говоришь что ты неинтересная, с тобой всегда весело, мне очень нравится проводить с тобой время.</p>
+                        <p>Ты вечно вспоминала обо мне, когда мы перестали общаться, еще и сама помирилась, не смотря на то, что я был виноват.</p>
+                        <p>Не смотря на то, что мы постоянно ругаемся, ты всегда прощаешь меня, даже когда я сильно не прав.</p>
+                        <p class="message-signature">♥ Люблю тебя ♥</p>
+                    </div>
+                    <div class="floating-hearts">
+                        <span class="floating-heart">♥</span>
+                        <span class="floating-heart">♥</span>
+                        <span class="floating-heart">♥</span>
+                        <span class="floating-heart">♥</span>
+                        <span class="floating-heart">♥</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/dates.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/mobile-touch.js"></script>
+</body>
+</html>
