@@ -6,8 +6,7 @@ class DateManager {
             '26 июля 2008',
             '6 января 2007',
             '7 сентября 2025',
-            '28 декабря 2024',
-            '31 декабря 2024'
+            '28 декабря 2024'
         ];
         
         this.currentIndex = 0;
@@ -51,4 +50,5 @@ class DateManager {
 // Инициализация при загрузке страницы
 window.addEventListener('DOMContentLoaded', () => {
     new DateManager();
+
 });
